@@ -25,12 +25,13 @@ import styled from 'styled-components';
 import Modal from 'react-modal';
 import {Delete} from 'components/common/icons';
 import {Button} from 'components/common/styled-components';
+import {media} from 'styles/media-breakpoints';
 
 const ModalContentWrapper = styled.div`
   height: 70vh;
   overflow-y: scroll;
   max-width: 960px;
-  padding: 24px 24px 40px;
+  padding: 24px 72px 40px;
   position: absolute;
   top: 92px;
   left: 0;
@@ -63,6 +64,12 @@ export const ModalTitle = styled.div`
   margin-bottom: 10px;
   position: relative;
   z-index: 10003;
+  ${media.palm`
+    font-size: ${props => props.theme.modalTitleFontSizeSmaller};
+  `};
+  ${media.portable`
+    font-size: ${props => props.theme.modalTitleFontSizeSmaller};
+  `};
 `;
 
 const StyledModalFooter = styled.div`
@@ -171,7 +178,7 @@ class ModalDialog extends Component {
               <Delete height="14px" />
             </CloseButton>
           )}
-          <div style={{padding: '0px 72px'}}>
+          <div>
             {props.title && (
               <ModalTitle className="modal--title">{props.title}</ModalTitle>
             )}

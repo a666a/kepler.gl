@@ -183,6 +183,7 @@ export const tooltipColor = '#333334';
 // Modal
 export const modalTitleColor = '#3A414C';
 export const modalTitleFontSize = '24px';
+export const modalTitleFontSizeSmaller = '18px';
 export const modalFooterBgd = '#F8F8F9';
 export const modalImagePlaceHolder = '#DDDFE3';
 export const modalPadding = '10px 0';
@@ -849,6 +850,7 @@ export const theme = {
   // Modal
   modalTitleColor,
   modalTitleFontSize,
+  modalTitleFontSizeSmaller,
   modalFooterBgd,
   modalImagePlaceHolder,
   modalPadding,
